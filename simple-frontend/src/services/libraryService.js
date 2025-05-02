@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 // Ensure the API_URL matches your backend server address
-const API_URL = 'http://localhost:3001/api'; 
+const API_URL = 'https://library-finder-backend-upr9.onrender.com'; 
 
 const libraryService = {
   /**
