@@ -1,0 +1,314 @@
+/* ComparePage Styles - Modern UI with animations */
+
+/* Main container */
+.compare-page-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Header section */
+.compare-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.compare-title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  background: linear-gradient(45deg, #2563eb, #7c3aed);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  letter-spacing: -0.5px;
+}
+
+.title-accent {
+  height: 4px;
+  width: 100px;
+  background: linear-gradient(90deg, #2563eb, #7c3aed);
+  margin: 0 auto 1.5rem;
+  border-radius: 2px;
+}
+
+.back-button {
+  padding: 0.75rem 1.5rem;
+  background-color: white;
+  border: 1px solid var(--color-gray-200);
+  border-radius: 8px;
+  color: var(--color-gray-700);
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: var(--shadow-sm);
+}
+
+.back-button:hover {
+  background-color: var(--color-gray-50);
+  color: var(--color-primary);
+  box-shadow: var(--shadow);
+}
+
+/* Loading and Error states */
+.compare-loading, 
+.compare-error {
+  width: 100%;
+  max-width: 700px;
+  margin: 3rem auto;
+  padding: 2rem;
+  text-align: center;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+}
+
+.compare-error {
+  border-left: 4px solid var(--color-error);
+  color: var(--color-error-dark);
+  background-color: var(--color-error-light);
+  animation: slideInDown 0.5s var(--ease-out);
+}
+
+.compare-error p {
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+}
+
+.error-back-button {
+  padding: 0.75rem 1.5rem;
+  background-color: white;
+  border: 1px solid var(--color-error-dark);
+  border-radius: 8px;
+  color: var(--color-error-dark);
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.error-back-button:hover {
+  background-color: var(--color-error-dark);
+  color: white;
+}
+
+/* Comparison Container */
+.comparison-container {
+  width: 100%;
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+  margin-bottom: 3rem;
+}
+
+/* Comparison Header Row */
+.comparison-header-row {
+  display: grid;
+  grid-template-columns: 180px repeat(auto-fit, minmax(200px, 1fr));
+  border-bottom: 2px solid var(--color-gray-100);
+  background: linear-gradient(to right, #f8fafc, #ffffff);
+}
+
+.comparison-card-header {
+  padding: 1.5rem;
+  text-align: center;
+  border-left: 1px solid var(--color-gray-100);
+}
+
+.library-name {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+  color: var(--color-primary);
+}
+
+.library-version {
+  font-size: 0.9rem;
+  color: var(--color-gray-500);
+  font-weight: 500;
+}
+
+/* Comparison Rows */
+.comparison-row {
+  display: grid;
+  grid-template-columns: 180px repeat(auto-fit, minmax(200px, 1fr));
+  border-bottom: 1px solid var(--color-gray-100);
+  background-color: white;
+}
+
+.comparison-row:nth-child(odd) {
+  background-color: var(--color-gray-50);
+}
+
+.comparison-metric-label {
+  padding: 1.5rem;
+  font-weight: 600;
+  color: var(--color-gray-700);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-right: 1px solid var(--color-gray-100);
+  background-color: var(--color-gray-100);
+}
+
+.metric-icon {
+  font-size: 1.2rem;
+}
+
+.comparison-cell {
+  padding: 1.5rem;
+  border-left: 1px solid var(--color-gray-100);
+}
+
+/* Library Description */
+.library-description {
+  font-size: 0.95rem;
+  color: var(--color-gray-700);
+  line-height: 1.5;
+}
+
+/* Metric Values with Progress Bars */
+.metric-value {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--color-gray-800);
+}
+
+.progress-bar-container {
+  height: 8px;
+  background-color: var(--color-gray-200);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  border-radius: 4px;
+}
+
+.progress-bar.stars {
+  background: linear-gradient(90deg, #facc15, #f97316);
+}
+
+.progress-bar.downloads {
+  background: linear-gradient(90deg, #2563eb, #4f46e5);
+}
+
+.progress-bar.score {
+  background: linear-gradient(90deg, #16a34a, #059669);
+}
+
+/* License Badge */
+.license-badge {
+  display: inline-block;
+  padding: 0.35rem 0.75rem;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  background-color: var(--color-gray-100);
+  color: var(--color-gray-800);
+  letter-spacing: 0.5px;
+}
+
+/* Tags */
+.tags-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tag {
+  display: inline-block;
+  padding: 0.25rem 0.65rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  background-color: var(--color-primary-light);
+  color: var(--color-primary-dark);
+}
+
+.no-tags {
+  font-style: italic;
+  color: var(--color-gray-500);
+  font-size: 0.9rem;
+}
+
+/* Links */
+.links-container {
+  display: flex;
+  gap: 1rem;
+}
+
+.library-link {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.npm-link {
+  background-color: #cc3534;
+  color: white;
+}
+
+.npm-link:hover {
+  background-color: #b02e2c;
+}
+
+.github-link {
+  background-color: #24292e;
+  color: white;
+}
+
+.github-link:hover {
+  background-color: #000000;
+}
+
+.homepage-link {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+.homepage-link:hover {
+  background-color: var(--color-primary-dark);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .compare-page-container {
+    padding: 1rem;
+  }
+  
+  .compare-title {
+    font-size: 2.5rem;
+  }
+  
+  .comparison-container {
+    overflow-x: auto;
+  }
+  
+  .comparison-header-row,
+  .comparison-row {
+    grid-template-columns: 120px repeat(auto-fit, 180px);
+    min-width: 600px;
+  }
+  
+  .comparison-metric-label {
+    padding: 1rem;
+  }
+  
+  .comparison-cell {
+    padding: 1rem;
+  }
+} 

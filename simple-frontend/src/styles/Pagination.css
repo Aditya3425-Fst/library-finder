@@ -1,0 +1,138 @@
+/* Pagination Styles */
+
+.pagination-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 0;
+  padding: 1rem;
+}
+
+.pagination-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1rem;
+  background-color: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  color: #4b5563;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  margin: 0 0.5rem;
+}
+
+.pagination-button:hover:not(:disabled) {
+  background-color: #f3f4f6;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.pagination-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.pagination-button.prev {
+  padding-left: 0.75rem;
+}
+
+.pagination-button.next {
+  padding-right: 0.75rem;
+}
+
+.pagination-button svg {
+  width: 18px;
+  height: 18px;
+}
+
+.pagination-button.prev svg {
+  margin-right: 6px;
+}
+
+.pagination-button.next svg {
+  margin-left: 6px;
+}
+
+.pagination-pages {
+  display: flex;
+  margin: 0 0.5rem;
+}
+
+.pagination-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  margin: 0 0.25rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  background-color: transparent;
+  color: #4b5563;
+}
+
+.pagination-page:hover {
+  background-color: #f3f4f6;
+  color: #111827;
+}
+
+.pagination-page.active {
+  background-color: #4f46e5;
+  color: white;
+}
+
+.pagination-ellipsis {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  font-weight: 500;
+  color: #9ca3af;
+}
+
+.pagination-info {
+  font-size: 0.9rem;
+  color: #6b7280;
+  margin: 0 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #f9fafb;
+  border-radius: 8px;
+  font-weight: 500;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .pagination-pages {
+    display: none;
+  }
+  
+  .pagination-info {
+    font-size: 0.85rem;
+    padding: 0.4rem 0.75rem;
+  }
+}
+
+/* Animations */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.pagination-button:focus {
+  animation: pulse 0.5s ease-in-out;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.2);
+} 
